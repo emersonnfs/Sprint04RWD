@@ -1,13 +1,14 @@
 import React from "react";
-import estagiario from "../img/estagiario.png"
-import empresa from "../img/empresa.png"
-import { DivCadastro,DivImgs,Img,DivImg,DivCinza,DivCabecalho,Button,ButtonBack} from "../style/styled";
+import estagiario from "../img/estagiario1.png"
+import empresa from "../img/empresa1.png"
+import { DivCadastro,DivImgs,Img,DivImg,DivCabecalho,Button,ButtonBack} from "../style/styled";
 import { BsArrowLeft as BACK } from 'react-icons/bs'
+import { Link } from "react-router-dom"
 
 export default function Cadastro() {
     return (
         
-        <DivCinza>
+        <div>
             <DivCadastro>
                 <DivCabecalho>
                     <div>
@@ -22,18 +23,18 @@ export default function Cadastro() {
                 <DivImgs>
                     <DivImg>
                         <Img src={estagiario} alt="cadastro do estagiario" />
-                        <a href="./">
-                            <Button type="submit">Estagiário</Button>
-                        </a>
+                        <nav>
+                            <Link to="/formCandidato"><Button type="submit" value="Estagiário">Estagiário</Button></Link>
+                        </nav> 
                     </DivImg>
                     <DivImg>
                         <Img src={empresa} alt="cadastro da empresa" />
-                        <a href="./">
-                            <Button type="submit">Empresa</Button>
-                        </a>
+                        <nav>
+                            <Link to="/formEmpresa"><Button type="submit" value="Empresa">Empresa</Button></Link>
+                        </nav>
                     </DivImg>     
                 </DivImgs>         
             </DivCadastro>
-        </DivCinza>
+        </div>
     );
 }

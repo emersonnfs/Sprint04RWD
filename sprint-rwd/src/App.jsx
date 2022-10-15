@@ -1,13 +1,16 @@
 import React from 'react'
-import Cadastro from './components/Cadastro'
-import {H1App,FooterApp}from './style/styled'
+import Menu from './components/Menu'
+import Rodape from './components/Rodape'
+import {DivApp}from './style/styled'
+import MainRoutes from './routes/MainRoutes'
 
 export default function App() {
   return (
-    <div>
-      <H1App>SolveUs</H1App>
-      <Cadastro/>
-      <FooterApp>Direitos reservados para SolveUs. 2022</FooterApp>
-    </div>
+    <DivApp>
+        <Menu />
+        <MainRoutes/>
+        <Rodape />
+    </DivApp>
+    
   )
 }
